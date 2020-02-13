@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E368935-44B9-4A86-8AA1-7FE30E69148E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CreatorModAPI</RootNamespace>
+    <AssemblyName>CreatorModAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Engine">
+      <HintPath>F:\Survivalcreat_MOD_project\Survivalcraft\Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="EntitySystem">
+      <HintPath>F:\Survivalcreat_MOD_project\Survivalcraft\EntitySystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono_Android">
+      <HintPath>F:\Survivalcreat_MOD_project\MODs\2.2\alls\Mono_Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Survivalcraft">
+      <HintPath>F:\Survivalcreat_MOD_project\Survivalcraft\Survivalcraft.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CopyAndPaste.cs" />
+    <Compile Include="CreatorAPI.cs" />
+    <Compile Include="CreatorBlockBehavior.cs" />
+    <Compile Include="CreatorGenerationAlgorithm.cs" />
+    <Compile Include="CreatorMain.cs" />
+    <Compile Include="Dialog\FourPointSpaceDialog.cs" />
+    <Compile Include="Dialog\ThreePointToPlaneDialog.cs" />
+    <Compile Include="Dialog\TwoPointLineDialog.cs" />
+    <Compile Include="Types\CreatorTerrainType.cs" />
+    <Compile Include="CreatorWidget.cs" />
+    <Compile Include="Datas\ChunkData.cs" />
+    <Compile Include="Dialog\CircleDialog.cs" />
+    <Compile Include="Dialog\CopyPasteDialog.cs" />
+    <Compile Include="Dialog\CreatorModAPIEditPaletteDialog.cs" />
+    <Compile Include="Dialog\CylindricalDialog.cs" />
+    <Compile Include="Dialog\EditRegionDialog.cs" />
+    <Compile Include="Dialog\EditWorldDialog.cs" />
+    <Compile Include="Dialog\FillingDialog.cs" />
+    <Compile Include="Dialog\InterfaceDialog.cs" />
+    <Compile Include="Dialog\LevelSetDialog.cs" />
+    <Compile Include="Dialog\MazeDialog.cs" />
+    <Compile Include="Dialog\ModDialog.cs" />
+    <Compile Include="Dialog\MountainDialog.cs" />
+    <Compile Include="Dialog\OnekeyGenerationDialog.cs" />
+    <Compile Include="Dialog\PavageDialog.cs" />
+    <Compile Include="Dialog\PillarsDialog.cs" />
+    <Compile Include="Dialog\PrismColumnDialog.cs" />
+    <Compile Include="Dialog\PrismDialog.cs" />
+    <Compile Include="Dialog\PyramidDialog.cs" />
+    <Compile Include="Dialog\RectangularDialog.cs" />
+    <Compile Include="Dialog\ReplaceDialog.cs" />
+    <Compile Include="Dialog\SetDialog.cs" />
+    <Compile Include="Dialog\SetModeDialog.cs" />
+    <Compile Include="Dialog\SphereDialog.cs" />
+    <Compile Include="Dialog\SpiralDialog.cs" />
+    <Compile Include="Dialog\TransferDialog.cs" />
+    <Compile Include="FileOperation.cs" />
+    <Compile Include="Maze.cs" />
+    <Compile Include="OnekeyGeneration.cs" />
+    <Compile Include="OnTouch.cs" />
+    <Compile Include="Terrain\CreatorNormalTerrain.cs" />
+    <Compile Include="Types\CreateBlockType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
